@@ -1,4 +1,4 @@
-FROM amazoncorretto:19-alpine-jdk as build
+FROM amazoncorretto:21-alpine-jdk as build
 
 WORKDIR /app/
 
@@ -6,7 +6,7 @@ COPY volume/HelloWorld.java /app/
 
 RUN javac HelloWorld.java
 
-FROM amazoncorretto:19-alpine-jdk as execute
+FROM amazoncorretto:21-alpine-jdk as execute
 
 WORKDIR /app/
 
